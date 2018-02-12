@@ -34,7 +34,20 @@
         
         //Cruza dados informados usando parametros de idade e sexo
         public function consultar_caracteristicas($idade, $sexo){
-            $sql = "SELECT * FROM usuarios where idade = '$idade' AND sexo = '$sexo'";
+            $sql = "SELECT * FROM usuarios where idade <= $idade AND sexo = '$sexo'";
+            $resultado = mysqli_query($this->conexao->getCon(), $sql);
+            
+            //Esse paramentro 'mysqli_num_rows' ve quantos resultados obtivemos
+            if(mysqli_num_rows($resultado) > 0){//Aqui comparamos se é maior que 0
+               return $resultado; 
+            }else{//Se nao achar nada a função acaba.
+                return false;
+            }
+        }
+        
+         //Aqui Estamos Fazendo uma consulta a outra tabela.
+        public function consulta_endereco($codigo){
+            $sql = "SELECT e.*, u.* FROM endereco as e INNER JOIN usuarios as u on (e.idUsuario = u.id) where u.id = $codigo ";
             $resultado = mysqli_query($this->conexao->getCon(), $sql);
             
             //Esse paramentro 'mysqli_num_rows' ve quantos resultados obtivemos
