@@ -1,9 +1,9 @@
 <?php
 class Conexao{
-    private $usuario = "nilsucoaxv8m24p8";
-    private $senha = "gl67cvb3mfjqwu3u";
-    private $caminho = "ffn96u87j5ogvehy.cbetxkdyhwsb.us-east-1.rds.amazonaws.com";
-    private $banco = "kl8n8dwgeg07w204";
+    private $usuario = "ge9a21rppwa1w037";
+    private $senha = "t9gkjy17v4xb5aga";
+    private $caminho = "lgg2gx1ha7yp2w0k.cbetxkdyhwsb.us-east-1.rds.amazonaws.com";
+    private $banco = "rn2t98tcjev4rd32";
     private $con;
     
     public function __construct(){
