@@ -1,9 +1,9 @@
 <?php
 class Conexao{
-    private $usuario = "root";
-    private $senha = "";
-    private $caminho = "localhost";
-    private $banco = "webapi";
+    private $usuario = "nilsucoaxv8m24p8";
+    private $senha = "gl67cvb3mfjqwu3u";
+    private $caminho = "ffn96u87j5ogvehy.cbetxkdyhwsb.us-east-1.rds.amazonaws.com";
+    private $banco = "kl8n8dwgeg07w204";
     private $con;
     
     public function __construct(){
